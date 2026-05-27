@@ -120,6 +120,22 @@ function computeResults() {
   return {catAverages, catDetails, overall};
 }
 
+let phrasesDB = [];
+
+function loadPhrases() {
+  fetch('frases.json')
+    .then(r => r.json())
+    .then(data => { phrasesDB = data; })
+    .catch(err => { console.warn('Could not load frases.json:', err); phrasesDB = []; });
+}
+
+function pickPhrase(tipo, notaLabel) {
+  if (!phrasesDB || !phrasesDB.length) return null;
+  const candidates = phrasesDB.filter(p => p.tipo === tipo && p.nota === notaLabel);
+  if (!candidates.length) return null;
+  return candidates[Math.floor(Math.random() * candidates.length)].mensagem;
+}
+
 function calculate() {
   const {catAverages, catDetails, overall} = computeResults();
   renderSummary(catDetails, overall);
@@ -148,21 +164,24 @@ function summarize() {
   html += `<p><strong>Média geral:</strong> ${overall.toFixed(2)} — <em>${classify(overall)}</em></p>`;
 
   if (strengths.length) {
-    html += `<p><strong>Onde está acertando:</strong></p><ul>` + strengths.map(d =>
-      `<li><strong>${d.title}:</strong> Há sinais de coerência e propósito — continue a cultivar essas práticas com constância.</li>`
-    ).join('') + `</ul>`;
+    html += `<p><strong>Onde está acertando:</strong></p><ul>` + strengths.map(d => {
+      const phrase = pickPhrase('strength', 'high') || `Há sinais de coerência e propósito — continue a cultivar essas práticas com constância.`;
+      return `<li><strong>${d.title}:</strong> ${phrase}</li>`;
+    }).join('') + `</ul>`;
   }
 
   if (middles.length) {
-    html += `<p><strong>Áreas que merecem atenção:</strong></p><ul>` + middles.map(d =>
-      `<li><strong>${d.title}:</strong> Existe potencial, porém requer pequenas reflexões e ajustes práticos.</li>`
-    ).join('') + `</ul>`;
+    html += `<p><strong>Áreas que merecem atenção:</strong></p><ul>` + middles.map(d => {
+      const phrase = pickPhrase('attention', 'mid') || `Existe potencial, porém requer pequenas reflexões e ajustes práticos.`;
+      return `<li><strong>${d.title}:</strong> ${phrase}</li>`;
+    }).join('') + `</ul>`;
   }
 
   if (weaknesses.length) {
-    html += `<p><strong>Onde precisa melhorar / Atenção:</strong></p><ul>` + weaknesses.map(d =>
-      `<li><strong>${d.title}:</strong> ${suggestFor(d.title)}</li>`
-    ).join('') + `</ul>`;
+    html += `<p><strong>Onde precisa melhorar / Atenção:</strong></p><ul>` + weaknesses.map(d => {
+      const phrase = pickPhrase('improve', 'low') || `Sugestão prática: iniciar ações corretivas e mensurar avanços.`;
+      return `<li><strong>${d.title}:</strong> ${phrase}</li>`;
+    }).join('') + `</ul>`;
   }
 
   if (!strengths.length && !weaknesses.length && !middles.length) {
@@ -203,11 +222,19 @@ function classify(score) {
 }
 
 function renderChart(values) {
-  const ctx = document.getElementById('radarChart').getContext('2d');
+  const canvasEl = document.getElementById('radarChart');
+  const ctx = canvasEl.getContext('2d');
   const labels = categories.map(c => c.title);
+
+  // Responsive sizing for mobile/desktop
+  const isMobile = window.innerWidth < 768;
+  const maxSize = isMobile ? 280 : 380;
+  canvasEl.width = maxSize;
+  canvasEl.height = maxSize;
 
   if (radarChart) {
     radarChart.data.datasets[0].data = values;
+    radarChart.resize();
     radarChart.update();
     return;
   }
@@ -221,18 +248,36 @@ function renderChart(values) {
         data: values,
         backgroundColor: 'rgba(11,132,255,0.15)',
         borderColor: 'rgba(11,132,255,0.9)',
-        pointBackgroundColor: 'rgba(11,132,255,0.9)'
+        pointBackgroundColor: 'rgba(11,132,255,0.9)',
+        borderWidth: 2,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        fill: true
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         r: {
           suggestedMin: 0,
           suggestedMax: 5,
-          ticks: {stepSize:1}
+          ticks: {stepSize: 1, font: {size: isMobile ? 10 : 12}},
+          grid: {drawBorder: true},
+          angleLines: {display: true}
         }
       },
-      plugins: {legend:{display:false}}
+      plugins: {
+        legend: {display: false},
+        tooltip: {
+          backgroundColor: 'rgba(11,18,33,0.8)',
+          padding: 12,
+          titleFont: {size: 12},
+          bodyFont: {size: 11},
+          borderColor: 'rgba(11,132,255,0.5)',
+          borderWidth: 1
+        }
+      }
     }
   });
 }
@@ -254,6 +299,18 @@ resetBtn.addEventListener('click', resetForm);
 
 renderForm();
 loadPhrases();
+
+// Handle window resize for responsive chart
+window.addEventListener('resize', () => {
+  if (radarChart) {
+    const isMobile = window.innerWidth < 768;
+    const maxSize = isMobile ? 280 : 380;
+    const canvas = document.getElementById('radarChart');
+    canvas.width = maxSize;
+    canvas.height = maxSize;
+    radarChart.resize();
+  }
+});
 
 let loadingTimer = null;
 let serverlessUrl = ''; // set this to your serverless endpoint URL if available
