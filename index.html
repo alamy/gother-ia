@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Diagnóstico de Liderança — Autoavaliação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <img src="img/logo.png" alt="Gother.IA" class="logo">
+      <div>
+        <h1>Diagnóstico de Liderança</h1>
+        <p class="subtitle">Autoavaliação institucional — notas de 0 a 5 (resultado só em tela)</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap main-grid">
+    <section class="panel" id="questions">
+      <h2>Responda as perguntas</h2>
+      <form id="diagnosticForm">
+        <!-- Perguntas serão renderizadas por JavaScript -->
+      </form>
+
+      <div class="actions">
+        <button id="calculate" type="button" class="btn primary">Calcular Resultado</button>
+        <button id="reset" type="button" class="btn">Limpar</button>
+      </div>
+    </section>
+
+    <aside class="panel" id="results">
+      <h2>Resultados</h2>
+      <div id="summary" class="summary">
+        <p class="muted">As médias por categoria e a classificação aparecem aqui após o cálculo.</p>
+      </div>
+
+      <div id="textSummary" class="text-summary" aria-live="polite"></div>
+
+      <div class="chart-wrap">
+        <canvas id="radarChart" width="400" height="400"></canvas>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">Feito pela GLMPE.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+  {"id":1,"tipo":"strength","nota":"high","mensagem":"Há sinais claros de coerência: mantenha o cultivo dessas práticas com serenidade."},
+  {"id":2,"tipo":"strength","nota":"high","mensagem":"As ações batem com as palavras; persista na constância para tornar o exemplo indelével."},
+  {"id":3,"tipo":"strength","nota":"high","mensagem":"A organização mostra resiliência nas práticas destacadas — um terreno fértil para crescimento ético."},
+
+  {"id":4,"tipo":"attention","nota":"mid","mensagem":"Existe potencial latente que pede pequenas reflexões e ajustes práticos para desabrochar."},
+  {"id":5,"tipo":"attention","nota":"mid","mensagem":"Algumas rotinas merecem atenção: reavalie com diálogo e implemente experimentos de melhoria em curto prazo."},
+  {"id":6,"tipo":"attention","nota":"mid","mensagem":"Há bases sobre as quais trabalhar; proponha ações de curto prazo e observe as mudanças com paciência filosófica."},
+
+  {"id":7,"tipo":"improve","nota":"low","mensagem":"Atenção necessária: recomendo um plano de ações claras, com responsáveis e prazos, para reequilibrar as práticas."},
+  {"id":8,"tipo":"improve","nota":"low","mensagem":"As estruturas carecem de reforço; inicie treinamentos práticos e fomente a cultura de reporte sem medo."},
+  {"id":9,"tipo":"improve","nota":"low","mensagem":"Comece por pequenas vitórias: intervenções simples e mensuráveis que testemunhem progresso coletivo."},
+
+  {"id":10,"tipo":"strength","nota":"high","mensagem":"Sua cultura interna revela sinais de cuidado e atenção às pessoas — continue a nutrir isso diariamente."},
+  {"id":11,"tipo":"attention","nota":"mid","mensagem":"Reflita sobre prioridades: priorizar pequenas mudanças pode produzir efeitos compounding ao longo do tempo."},
+  {"id":12,"tipo":"improve","nota":"low","mensagem":"É momento de planejar ações corretivas com humildade: reconhecer fragilidades é o primeiro passo para superá-las."}
+]

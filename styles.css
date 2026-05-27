@@ -1,0 +1,52 @@
+:root{
+	--bg:#f6f8fb;--card:#ffffff;--muted:#6b7380;--accent:#0b84ff;--text:#0b1221;--gap:1rem
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,Helvetica;background:var(--bg);color:var(--text);}
+.wrap{max-width:1100px;margin:0 auto;padding:1rem}
+.topbar{background:#fff;border-bottom:1px solid #e6e9ee}
+.topbar .wrap{display:flex;align-items:center;gap:0.75rem}
+.logo{width:54px;height:54px;object-fit:contain;border-radius:8px}
+.topbar h1{margin:0;padding:0.5rem 0;font-size:1.25rem}
+.subtitle{margin:0;color:var(--muted);font-size:0.9rem}
+
+.main-grid{display:grid;grid-template-columns:1fr 380px;gap:1rem;padding:1rem}
+.panel{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(11,18,33,0.06)}
+
+@media (max-width:900px){
+	.main-grid{grid-template-columns:1fr;}
+}
+
+.panel h2{margin-top:0}
+#diagnosticForm{display:flex;flex-direction:column;gap:0.75rem}
+.category{border-left:4px solid #e9eef7;padding:0.5rem 0.75rem;border-radius:6px}
+.category h3{margin:0 0 0.5rem;font-size:1rem}
+.q{display:flex;flex-direction:column;gap:0.25rem;padding:0.45rem 0}
+.q .label{font-size:0.95rem}
+.q .controls{display:flex;align-items:center;gap:0.5rem}
+.q input[type="range"]{flex:1}
+.q .val{min-width:28px;text-align:center;font-weight:600}
+
+.actions{display:flex;gap:0.5rem;margin-top:0.75rem}
+.btn{padding:0.5rem 0.9rem;border-radius:8px;border:1px solid #d6dce9;background:#fff;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.summary p{margin:0 0 0.5rem}
+.summary .list{display:grid;gap:0.35rem}
+.muted{color:var(--muted)}
+
+.chart-wrap{margin-top:0.75rem}
+
+.foot{padding:1rem;margin-top:1rem;color:var(--muted);font-size:0.9rem}
+
+.classification{margin-top:0.5rem;font-weight:700}
+
+.text-summary{margin-top:0.75rem;padding:0.75rem;border-radius:8px;background:#fbfdff;border:1px solid #e6eef7;max-height:220px;overflow:auto}
+.text-summary h4{margin:0 0 0.4rem}
+.text-summary ul{margin:0.25rem 0 0 1rem;padding:0}
+
+.progress{width:100%;height:10px;background:#e9eef7;border-radius:8px;overflow:hidden;margin-bottom:0.5rem}
+.progress-bar{width:0;height:100%;background:var(--accent);transition:width 3s linear}
+.text-summary .muted{margin:0}
+

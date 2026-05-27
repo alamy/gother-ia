@@ -1,0 +1,15 @@
+# Node, editor and system ignores
+node_modules/
+.env
+.DS_Store
+.vscode/
+.idea/
+dist/
+.dist/
+Thumbs.db
+
+# Mac/iOS
+.AppleDouble
+
+# Logs
+*.log
