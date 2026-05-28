@@ -1,17 +1,633 @@
+
 [
-  {"id":1,"tipo":"strength","nota":"high","mensagem":"Há sinais claros de coerência: mantenha o cultivo dessas práticas com serenidade."},
-  {"id":2,"tipo":"strength","nota":"high","mensagem":"As ações batem com as palavras; persista na constância para tornar o exemplo indelével."},
-  {"id":3,"tipo":"strength","nota":"high","mensagem":"A organização mostra resiliência nas práticas destacadas — um terreno fértil para crescimento ético."},
-
-  {"id":4,"tipo":"attention","nota":"mid","mensagem":"Existe potencial latente que pede pequenas reflexões e ajustes práticos para desabrochar."},
-  {"id":5,"tipo":"attention","nota":"mid","mensagem":"Algumas rotinas merecem atenção: reavalie com diálogo e implemente experimentos de melhoria em curto prazo."},
-  {"id":6,"tipo":"attention","nota":"mid","mensagem":"Há bases sobre as quais trabalhar; proponha ações de curto prazo e observe as mudanças com paciência filosófica."},
-
-  {"id":7,"tipo":"improve","nota":"low","mensagem":"Atenção necessária: recomendo um plano de ações claras, com responsáveis e prazos, para reequilibrar as práticas."},
-  {"id":8,"tipo":"improve","nota":"low","mensagem":"As estruturas carecem de reforço; inicie treinamentos práticos e fomente a cultura de reporte sem medo."},
-  {"id":9,"tipo":"improve","nota":"low","mensagem":"Comece por pequenas vitórias: intervenções simples e mensuráveis que testemunhem progresso coletivo."},
-
-  {"id":10,"tipo":"strength","nota":"high","mensagem":"Sua cultura interna revela sinais de cuidado e atenção às pessoas — continue a nutrir isso diariamente."},
-  {"id":11,"tipo":"attention","nota":"mid","mensagem":"Reflita sobre prioridades: priorizar pequenas mudanças pode produzir efeitos compounding ao longo do tempo."},
-  {"id":12,"tipo":"improve","nota":"low","mensagem":"É momento de planejar ações corretivas com humildade: reconhecer fragilidades é o primeiro passo para superá-las."}
+  {
+    "id": 1,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Kant",
+    "mensagem": "A disciplina moral revela-se nas pequenas ações repetidas diariamente; é nelas que o caráter se consolida."
+  },
+  {
+    "id": 2,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Marco Aurélio",
+    "mensagem": "A serenidade diante das dificuldades demonstra domínio interior e maturidade de espírito."
+  },
+  {
+    "id": 3,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Reconhecer as próprias sombras é um sinal raro de evolução e consciência."
+  },
+  {
+    "id": 4,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Pitágoras",
+    "mensagem": "A harmonia entre pensamento e ação fortalece a estrutura invisível da vida."
+  },
+  {
+    "id": 5,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Rui Barbosa",
+    "mensagem": "A constância nas virtudes transforma o homem comum em referência para os demais."
+  },
+  {
+    "id": 6,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "O verdadeiro construtor começa pela lapidação silenciosa de si mesmo."
+  },
+  {
+    "id": 7,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Platão",
+    "mensagem": "Quem cultiva a justiça interior naturalmente ilumina os caminhos ao redor."
+  },
+  {
+    "id": 8,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Voltaire",
+    "mensagem": "A lucidez nasce quando o homem aprende a questionar sem perder a humildade."
+  },
+  {
+    "id": 9,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Sócrates",
+    "mensagem": "Toda evolução começa quando o homem admite aquilo que ainda precisa aprender."
+  },
+  {
+    "id": 10,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Os conflitos ignorados tendem a governar silenciosamente nossas decisões."
+  },
+  {
+    "id": 11,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Kant",
+    "mensagem": "A razão deve guiar os impulsos, para que a liberdade não se torne desordem."
+  },
+  {
+    "id": 12,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Sêneca",
+    "mensagem": "Pequenos desvios repetidos moldam grandes destinos; vigie os hábitos cotidianos."
+  },
+  {
+    "id": 13,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Confúcio",
+    "mensagem": "A prudência em tempos de desequilíbrio é uma forma elevada de sabedoria."
+  },
+  {
+    "id": 14,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "Antes de corrigir o mundo externo, examine a geometria do próprio coração."
+  },
+  {
+    "id": 15,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Aristóteles",
+    "mensagem": "O equilíbrio é conquistado na prática diária das virtudes."
+  },
+  {
+    "id": 16,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Nietzsche",
+    "mensagem": "O homem cresce quando confronta suas próprias limitações com coragem."
+  },
+  {
+    "id": 17,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Negar as fragilidades apenas fortalece aquilo que deveria ser transformado."
+  },
+  {
+    "id": 18,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Kant",
+    "mensagem": "Sem responsabilidade prática, até as melhores intenções tornam-se vazias."
+  },
+  {
+    "id": 19,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Sêneca",
+    "mensagem": "Nenhum vento favorece quem desconhece o próprio rumo."
+  },
+  {
+    "id": 20,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "A pedra negligenciada pelo obreiro torna-se obstáculo no templo do amanhã."
+  },
+  {
+    "id": 21,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Churchill",
+    "mensagem": "Grandes reconstruções começam aceitando os próprios erros sem desculpas."
+  },
+  {
+    "id": 22,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Sun Tzu",
+    "mensagem": "Ignorar os sinais do desgaste interno compromete qualquer estratégia futura."
+  },
+  {
+    "id": 23,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Jung",
+    "mensagem": "Aquilo que não é conscientizado retorna como destino."
+  },
+  {
+    "id": 24,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Leonardo da Vinci",
+    "mensagem": "A transformação exige observação cuidadosa e ação contínua."
+  },
+  {
+    "id": 25,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Albert Pike",
+    "mensagem": "A verdadeira força moral nasce do domínio sobre si mesmo."
+  },
+  {
+    "id": 26,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em René Descartes",
+    "mensagem": "Questione os fundamentos antes de reconstruir as estruturas."
+  },
+  {
+    "id": 27,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Benjamin Franklin",
+    "mensagem": "Hábitos negligenciados hoje tornam-se crises difíceis amanhã."
+  },
+  {
+    "id": 28,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Goethe",
+    "mensagem": "O homem revela sua grandeza quando persevera com equilíbrio."
+  },
+  {
+    "id": 29,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Allan Kardec",
+    "mensagem": "O progresso real acontece quando há esforço consciente pela melhoria interior."
+  },
+  {
+    "id": 30,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Maquiavel",
+    "mensagem": "Estruturas frágeis tendem a ruir quando não são fortalecidas preventivamente."
+  },
+  {
+    "id": 1,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Kant",
+    "mensagem": "A disciplina moral revela-se nas pequenas ações repetidas diariamente; é nelas que o caráter se consolida."
+  },
+  {
+    "id": 2,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Marco Aurélio",
+    "mensagem": "A serenidade diante das dificuldades demonstra domínio interior e maturidade de espírito."
+  },
+  {
+    "id": 3,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Reconhecer as próprias sombras é um sinal raro de evolução e consciência."
+  },
+  {
+    "id": 4,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Pitágoras",
+    "mensagem": "A harmonia entre pensamento e ação fortalece a estrutura invisível da vida."
+  },
+  {
+    "id": 5,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Rui Barbosa",
+    "mensagem": "A constância nas virtudes transforma o homem comum em referência para os demais."
+  },
+  {
+    "id": 6,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "O verdadeiro construtor começa pela lapidação silenciosa de si mesmo."
+  },
+  {
+    "id": 7,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Platão",
+    "mensagem": "Quem cultiva a justiça interior naturalmente ilumina os caminhos ao redor."
+  },
+  {
+    "id": 8,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Voltaire",
+    "mensagem": "A lucidez nasce quando o homem aprende a questionar sem perder a humildade."
+  },
+  {
+    "id": 9,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Sócrates",
+    "mensagem": "Toda evolução começa quando o homem admite aquilo que ainda precisa aprender."
+  },
+  {
+    "id": 10,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Os conflitos ignorados tendem a governar silenciosamente nossas decisões."
+  },
+  {
+    "id": 11,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Kant",
+    "mensagem": "A razão deve guiar os impulsos, para que a liberdade não se torne desordem."
+  },
+  {
+    "id": 12,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Sêneca",
+    "mensagem": "Pequenos desvios repetidos moldam grandes destinos; vigie os hábitos cotidianos."
+  },
+  {
+    "id": 13,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Confúcio",
+    "mensagem": "A prudência em tempos de desequilíbrio é uma forma elevada de sabedoria."
+  },
+  {
+    "id": 14,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "Antes de corrigir o mundo externo, examine a geometria do próprio coração."
+  },
+  {
+    "id": 15,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Aristóteles",
+    "mensagem": "O equilíbrio é conquistado na prática diária das virtudes."
+  },
+  {
+    "id": 16,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Nietzsche",
+    "mensagem": "O homem cresce quando confronta suas próprias limitações com coragem."
+  },
+  {
+    "id": 17,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Negar as fragilidades apenas fortalece aquilo que deveria ser transformado."
+  },
+  {
+    "id": 18,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Kant",
+    "mensagem": "Sem responsabilidade prática, até as melhores intenções tornam-se vazias."
+  },
+  {
+    "id": 19,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Sêneca",
+    "mensagem": "Nenhum vento favorece quem desconhece o próprio rumo."
+  },
+  {
+    "id": 20,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "A pedra negligenciada pelo obreiro torna-se obstáculo no templo do amanhã."
+  },
+  {
+    "id": 21,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Churchill",
+    "mensagem": "Grandes reconstruções começam aceitando os próprios erros sem desculpas."
+  },
+  {
+    "id": 22,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Sun Tzu",
+    "mensagem": "Ignorar os sinais do desgaste interno compromete qualquer estratégia futura."
+  },
+  {
+    "id": 23,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Jung",
+    "mensagem": "Aquilo que não é conscientizado retorna como destino."
+  },
+  {
+    "id": 24,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Leonardo da Vinci",
+    "mensagem": "A transformação exige observação cuidadosa e ação contínua."
+  },
+  {
+    "id": 25,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Albert Pike",
+    "mensagem": "A verdadeira força moral nasce do domínio sobre si mesmo."
+  },
+  {
+    "id": 26,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em René Descartes",
+    "mensagem": "Questione os fundamentos antes de reconstruir as estruturas."
+  },
+  {
+    "id": 27,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Benjamin Franklin",
+    "mensagem": "Hábitos negligenciados hoje tornam-se crises difíceis amanhã."
+  },
+  {
+    "id": 28,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Goethe",
+    "mensagem": "O homem revela sua grandeza quando persevera com equilíbrio."
+  },
+  {
+    "id": 29,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Allan Kardec",
+    "mensagem": "O progresso real acontece quando há esforço consciente pela melhoria interior."
+  },
+  {
+    "id": 30,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Maquiavel",
+    "mensagem": "Estruturas frágeis tendem a ruir quando não são fortalecidas preventivamente."
+  },
+  {
+    "id": 61,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Baruch Spinoza",
+    "mensagem": "A clareza da mente fortalece a liberdade interior e conduz a ações mais justas."
+  },
+  {
+    "id": 62,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Viktor Frankl",
+    "mensagem": "Mesmo nas dificuldades, quem encontra propósito preserva sua dignidade."
+  },
+  {
+    "id": 63,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Immanuel Kant",
+    "mensagem": "O dever praticado com integridade silenciosa molda o verdadeiro caráter."
+  },
+  {
+    "id": 64,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "A luz do conhecimento cresce quando compartilhada com humildade e fraternidade."
+  },
+  {
+    "id": 65,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Confúcio",
+    "mensagem": "A retidão constante inspira mais do que longos discursos."
+  },
+  {
+    "id": 66,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Rousseau",
+    "mensagem": "A autenticidade nas ações revela a força da consciência moral."
+  },
+  {
+    "id": 67,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Santo Tomás de Aquino",
+    "mensagem": "A prudência é a guardiã das decisões sábias."
+  },
+  {
+    "id": 68,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Marco Aurélio",
+    "mensagem": "A serenidade diante do caos demonstra domínio sobre si mesmo."
+  },
+  {
+    "id": 69,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Nietzsche",
+    "mensagem": "O crescimento exige coragem para abandonar velhas certezas."
+  },
+  {
+    "id": 70,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Freud",
+    "mensagem": "Aquilo que permanece reprimido influencia silenciosamente os comportamentos."
+  },
+  {
+    "id": 71,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Aristóteles",
+    "mensagem": "Virtudes enfraquecem quando deixam de ser exercitadas diariamente."
+  },
+  {
+    "id": 72,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "A construção interior requer vigilância contínua sobre pensamentos e atitudes."
+  },
+  {
+    "id": 73,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Epicuro",
+    "mensagem": "A busca excessiva por resultados imediatos compromete a tranquilidade duradoura."
+  },
+  {
+    "id": 74,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em René Descartes",
+    "mensagem": "Dúvidas honestas podem ser o início de grandes reconstruções."
+  },
+  {
+    "id": 75,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Sêneca",
+    "mensagem": "Pequenos atrasos na disciplina tornam-se grandes desafios no futuro."
+  },
+  {
+    "id": 76,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Gandhi",
+    "mensagem": "Mudanças externas começam pela transformação silenciosa do indivíduo."
+  },
+  {
+    "id": 77,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Carl Jung",
+    "mensagem": "Negligenciar os próprios conflitos internos fortalece suas consequências futuras."
+  },
+  {
+    "id": 78,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Kant",
+    "mensagem": "Sem coerência prática, os princípios perdem sua força moral."
+  },
+  {
+    "id": 79,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Thomas Hobbes",
+    "mensagem": "Estruturas sem manutenção inevitavelmente caminham para o desgaste."
+  },
+  {
+    "id": 80,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em um princípio maçônico",
+    "mensagem": "A pedra abandonada sem lapidação jamais encontrará seu encaixe perfeito."
+  },
+  {
+    "id": 81,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Sun Tzu",
+    "mensagem": "Ignorar pequenos sinais de fragilidade compromete estratégias maiores."
+  },
+  {
+    "id": 82,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Maquiavel",
+    "mensagem": "A falta de preparo transforma crises previsíveis em grandes perdas."
+  },
+  {
+    "id": 83,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Leonardo da Vinci",
+    "mensagem": "A excelência exige revisão constante da própria obra."
+  },
+  {
+    "id": 84,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Dostoiévski",
+    "mensagem": "O homem que foge de suas responsabilidades enfraquece lentamente sua própria liberdade."
+  },
+  {
+    "id": 85,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Albert Pike",
+    "mensagem": "A evolução moral nasce do esforço disciplinado e silencioso."
+  },
+  {
+    "id": 86,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Lao Tsé",
+    "mensagem": "A rigidez excessiva impede o fluxo natural do aprendizado."
+  },
+  {
+    "id": 87,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Benjamin Franklin",
+    "mensagem": "Hábitos negligenciados hoje tornam-se obstáculos difíceis amanhã."
+  },
+  {
+    "id": 88,
+    "tipo": "strength",
+    "nota": "high",
+    "origem": "Inspirado em Platão",
+    "mensagem": "A busca pela verdade fortalece aqueles que desejam construir algo duradouro."
+  },
+  {
+    "id": 89,
+    "tipo": "attention",
+    "nota": "mid",
+    "origem": "Inspirado em Allan Kardec",
+    "mensagem": "O progresso verdadeiro exige constância e humildade diante das imperfeições."
+  },
+  {
+    "id": 90,
+    "tipo": "improve",
+    "nota": "low",
+    "origem": "Inspirado em Winston Churchill",
+    "mensagem": "Adiar decisões necessárias amplia o peso das dificuldades futuras."
+  }
 ]

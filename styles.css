@@ -38,6 +38,21 @@ input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:non
 input[type="range"]::-moz-range-track{height:6px;background:#e9eef7;border-radius:3px;border:none}
 input[type="range"]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 2px 6px rgba(11,132,255,0.3);border:2px solid white}
 
+/* Improved visibility and touch targets for sliders */
+input[type="range"]{touch-action:none}
+input[type="range"]:focus{outline:none}
+input[type="range"]::-webkit-slider-runnable-track{background:linear-gradient(0deg,#0b84ff 0%, #b9b9b9 0%, #e9eef7 50%); border-radius: 20px;}
+input[type="range"]:active::-webkit-slider-thumb, input[type="range"]:focus::-webkit-slider-thumb{transform:scale(1.06);box-shadow:0 4px 14px rgba(11,132,255,0.35)}
+
+/* Fallback track styling for Firefox when JS not updating filled portion */
+input[type="range"]::-moz-range-progress{background:rgba(11,132,255,0.12);height:6px;border-radius:3px}
+input[type="range"]::-moz-range-track{background:#e9eef7;height:6px;border-radius:3px}
+
+/* Instruction box */
+.instructions{background:#ffffff;border-left:4px solid var(--accent);padding:0.8rem;border-radius:8px;margin-bottom:0.75rem;color:var(--text);box-shadow:0 1px 4px rgba(11,18,33,0.04)}
+.instructions p{margin:0.35rem 0 0;font-size:0.92rem;color:var(--muted)}
+
+
 .q .val{min-width:36px;height:36px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:1rem;background:var(--accent);color:white;border-radius:8px;flex-shrink:0}
 
 /* Buttons */
